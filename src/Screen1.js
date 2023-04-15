@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   StyleSheet,
   View,
   Text,
   TextInput,
   TouchableOpacity,
-  ScrollView,
-} from 'react-native';
-import { Picker } from '@react-native-picker/picker';
+  ScrollView
+} from 'react-native'
+import { Picker } from '@react-native-picker/picker'
 
 const Screen1 = () => {
-  const [typeDeLimiteur, setTypeDeLimiteur] = useState('dBu');
-  const [wattHp, setWattHp] = useState(1000);
-  const [ohm, setOhm] = useState(4);
-  const [puissanceAmpli, setPuissanceAmpli] = useState(1000);
-  const [gain, setGain] = useState(39);
-  const [charge, setCharge] = useState('ouverte');
-  const [hpf, setHpf] = useState(30);
-  const [limiterType, setLimiterType] = useState('soft');
+  const [typeDeLimiteur, setTypeDeLimiteur] = useState('dBu')
+  const [wattHp, setWattHp] = useState(1000)
+  const [ohm, setOhm] = useState(4)
+  const [puissanceAmpli, setPuissanceAmpli] = useState(1000)
+  const [gain, setGain] = useState(39)
+  const [charge, setCharge] = useState('ouverte')
+  const [hpf, setHpf] = useState(30)
+  const [limiterType, setLimiterType] = useState('soft')
 
   return (
       <ScrollView contentContainerStyle={styles.container}>
@@ -29,7 +29,7 @@ const Screen1 = () => {
             selectedValue={typeDeLimiteur}
             style={styles.picker}
             onValueChange={(itemValue, itemIndex) =>
-                setTypeDeLimiteur(itemValue)
+              setTypeDeLimiteur(itemValue)
             }
         >
           <Picker.Item label="dBu" value="dBu" />
@@ -125,29 +125,29 @@ const Screen1 = () => {
       </View>
 
     </ScrollView>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     paddingHorizontal: 16,
-    paddingTop: 32,
+    paddingTop: 32
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    paddingBottom: 16,
+    paddingBottom: 16
   },
   row: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    paddingBottom: 16,
+    paddingBottom: 16
   },
   picker: {
     height: 50,
-    width: 150,
+    width: 150
   },
   input: {
     height: 40,
@@ -155,16 +155,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     width: 150,
     textAlign: 'right',
-    paddingHorizontal: 8,
+    paddingHorizontal: 8
   },
   radioButton: {
     backgroundColor: '#f0f0f0',
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderRadius: 4,
-    marginHorizontal: 4,
-  },
-});
+    marginHorizontal: 4
+  }
+})
 
-export default Screen1;
-
+export default Screen1
